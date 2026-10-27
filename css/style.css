@@ -1,0 +1,200 @@
+:root {
+    --scp-red:#8f1111;
+    --scp-dark:#101216;
+    --scp-panel:#191d23;
+    --scp-light:#f4f4f4;
+}
+
+/* Global */
+body {
+    background:linear-gradient(135deg,#0f1115 0%,#222732 55%,#111 100%);
+    color:var(--scp-light);
+    font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;
+}
+
+/* Navbar */
+.scp-navbar {
+    background:rgba(16,18,22,.96);
+    border-bottom:3px solid var(--scp-red);
+}
+
+/* Page wrapper */
+.page-wrap {
+    padding-top:95px;
+    min-height:calc(100vh - 120px);
+}
+
+/* Hero section */
+.hero {
+    background:linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.68)),
+               url('images/SCP-logo.png') center/cover;
+    border:1px solid #373d48;
+    border-radius:22px;
+    padding:42px 26px;
+    margin-bottom:28px;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+.hero h1 {
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.hero .badge {
+    font-size:.95rem;
+}
+
+/* Cards */
+.card {
+    background:var(--scp-panel);
+    color:var(--scp-light);
+    border:1px solid #343a46;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(184,22,22,.35);
+}
+
+.card-img-top {
+    height:140px;
+    object-fit:cover;
+    background:#111;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
+}
+
+/* Object class colors */
+.object-class {
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.Safe { color:#56d364; }
+.Euclid { color:#f5c542; }
+.Keter { color:#ff6565; }
+.Thaumiel { color:#75b7ff; }
+
+/* Buttons */
+.btn-scp {
+    background:var(--scp-red);
+    color:white;
+    border:none;
+}
+
+.btn-scp:hover {
+    background:#b81616;
+    color:#fff;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    background:#11151b;
+    color:#f8f9fa;
+    border-color:#4a5361;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background:#11151b;
+    color:#fff;
+    border-color:#b81616;
+    box-shadow:0 0 0 .2rem rgba(184,22,22,.25);
+}
+
+/* Tables */
+.table {
+    --bs-table-bg:#191d23;
+    --bs-table-color:#f8f9fa;
+    --bs-table-border-color:#363d49;
+}
+
+/* Footer */
+.footer {
+    background:#0d0f13;
+    border-top:1px solid #2d3340;
+    color:#bbb;
+}
+
+/* Truncate text */
+.truncate {
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
+/* Mobile */
+@media(max-width:576px) {
+    .page-wrap { padding-top:82px; }
+    .hero { padding:26px 18px; }
+    .hero h1 { font-size:1.8rem; }
+    .card-img-top { height:110px; }
+    .btn-group-responsive {
+        display:grid;
+        gap:.5rem;
+    }
+    .btn-group-responsive .btn {
+        width:100%;
+    }
+}
+
+
+/* SCP MODAL GLOW + ANIMATION    */
+
+
+.modal-content {
+    border: 2px solid var(--scp-red);
+    box-shadow: 0 0 25px rgba(143, 17, 17, 0.6);
+    animation: scpFadeIn 0.6s ease-out;
+}
+
+@keyframes scpFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+        box-shadow: 0 0 0 rgba(143, 17, 17, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(143, 17, 17, 0.6);
+    }
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: 1px solid var(--scp-red);
+    background: linear-gradient(90deg, rgba(143,17,17,0.2), rgba(143,17,17,0.05));
+}
+
+/* Modal Title */
+.modal-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--scp-light);
+}
+
+/* Modal Image */
+.modal-body img {
+    border: 1px solid rgba(143,17,17,0.4);
+    box-shadow: 0 0 15px rgba(143,17,17,0.3);
+}
+
+/* Modal Scrollbar */
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: var(--scp-red);
+    border-radius: 4px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background-color: #111;
+}
