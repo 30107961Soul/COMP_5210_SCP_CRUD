@@ -24,7 +24,7 @@ $subjects = $stmt->fetchAll();
 
 <section class="hero text-center">
     <span class="badge bg-danger mb-3">CLASSIFIED DATABASE</span>
-    <h1>SCP Subject Management System</h1>
+    <h1>SCP Subject Management</h1>
     <p class="lead mb-0">Responsive PHP/MySQL CRUD application for administrator control of SCP records.</p>
 </section>
 
